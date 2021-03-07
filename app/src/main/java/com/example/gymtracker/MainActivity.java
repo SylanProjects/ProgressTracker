@@ -23,19 +23,22 @@ public class MainActivity extends AppCompatActivity {
     }
     @SuppressLint("SetTextI18n")
     public void changeName(View v) {
-        //R.id.textView
+        // Used to retrieve text
         TextView textViewToChange = (TextView) findViewById(R.id.textView);
         EditText text = (EditText) findViewById(R.id.editTextTextPersonName2);
-        //textViewToChange.setText(
-        //        "" + text.getText());
+        
+        // Used to create a new component and set its text
         TextView mycomponent;
         mycomponent = new TextView(getApplicationContext());
         mycomponent.setText(text.getText());
 
+        // Used to create the text in a layout
         ConstraintLayout conL = (ConstraintLayout) findViewById(R.id.conLay);
-
         mycomponent.setLayoutParams(textViewToChange.getLayoutParams());
         mycomponent.setY(mycomponent.getY() - 50);
         conL.addView(mycomponent);
+    }
+    public void nextActivity(View v) {
+        // Move to the next Activity
     }
 }
