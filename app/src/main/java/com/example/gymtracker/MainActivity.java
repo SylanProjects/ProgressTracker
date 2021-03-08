@@ -5,6 +5,7 @@ import androidx.constraintlayout.solver.widgets.ConstraintHorizontalLayout;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         // Used to retrieve text
         TextView textViewToChange = (TextView) findViewById(R.id.textView);
         EditText text = (EditText) findViewById(R.id.editTextTextPersonName2);
-        
+
         // Used to create a new component and set its text
         TextView mycomponent;
         mycomponent = new TextView(getApplicationContext());
@@ -38,7 +39,11 @@ public class MainActivity extends AppCompatActivity {
         mycomponent.setY(mycomponent.getY() - 50);
         conL.addView(mycomponent);
     }
-    public void nextActivity(View v) {
-        // Move to the next Activity
+    public void activityAddTracker(View v) {
+        // Launch a new activity
+        Intent intent = new Intent(this, AddTrackerActivity.class);
+        startActivity(intent);
+
     }
+
 }
