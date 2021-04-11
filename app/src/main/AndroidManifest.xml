@@ -12,7 +12,8 @@
         <activity
             android:name=".AddTrackerActivity"
             android:label="@string/title_activity_add_tracker"
-            android:theme="@style/Theme.GymTracker.NoActionBar"></activity>
+            android:theme="@style/Theme.GymTracker.NoActionBar"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
